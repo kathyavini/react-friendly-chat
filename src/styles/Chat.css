@@ -24,6 +24,8 @@
 
 .chatHeader h2 {
     font-size: var(--respM);
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .chatHeader > div {

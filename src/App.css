@@ -12,7 +12,8 @@
   --mainFont: 'Varela', sans-serif;
   --secondaryFont: 'Asul', sans-serif;
 
-  --respS: clamp(0.8rem, 0.7rem + 4vw, 1.7rem);
+  --respXS: clamp(0.6rem, 0.6rem + 3vw, 1.7rem);
+  --respS: clamp(0.8rem, 0.7rem + 3vw, 1.7rem);
   --respM: clamp(1.8rem, 1rem + 2vw, 2.5rem);
   --respL: clamp(2rem, 1rem + 4vw, 4rem);
   --respXL: clamp(3rem, 2.5rem + 3vw, 6rem);

@@ -12,12 +12,8 @@
 
 .message {
     width: min(90vw, 500px);
-    font-size: var(--respM);
+    font-size: var(--respS);
 }
-.message span {
-    font-weight: bold;
-}
-
 .safeContainer button {
     background-color: var(--secondary);
     color: var(--dark);
@@ -27,7 +23,7 @@
     position: relative;
     padding: 20px 40px;
     border-radius: 60px;
-    font-size: var(--respM);
+    font-size: var(--respS);
     font-family: var(--mainFont);
     text-transform: uppercase;
     transition: all 200ms;

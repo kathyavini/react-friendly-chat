@@ -1,36 +1,68 @@
-import React from 'react';
 import './App.css';
 
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
-import 'firebase/compat/auth';
+import { initializeApp } from 'firebase/app';
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+} from 'firebase/auth';
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  query,
+  orderBy,
+  limit,
+  onSnapshot,
+  setDoc,
+  updateDoc,
+  doc,
+  serverTimestamp,
+} from 'firebase/firestore';
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from 'firebase/storage';
+
+// import firebase from 'firebase/compat/app';
+// import 'firebase/compat/firestore';
+// import 'firebase/compat/auth';
+// import { getAuth } from "firebase/auth"
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
-import { AnyRecord } from 'dns';
+
+import { getFirebaseConfig } from './firebase-config.js';
 import { SignIn } from './components/SignIn';
 import { Chat } from './components/Chat';
-import { Safe } from './components/Safe';
 
-firebase.initializeApp({
-  apiKey: 'AIzaSyDGI-KH9benHsCtCUq_Z3tnbZthuzui7S8',
-  authDomain: 'reactfriendlychat.firebaseapp.com',
-  projectId: 'reactfriendlychat',
-  storageBucket: 'reactfriendlychat.appspot.com',
-  messagingSenderId: '667588774051',
-  appId: '1:667588774051:web:5c7d5cb4ab7edc9d2d5716',
-});
-
-const auth = firebase.auth();
-const firestore = firebase.firestore();
+const firebaseAppConfig = getFirebaseConfig();
+initializeApp(firebaseAppConfig);
 
 function App() {
-  // const [user] = useAuthState(auth as any);
-  // https://stackoverflow.com/questions/70628540/argument-of-type-firebase-default-auth-auth-is-not-assignable-to-parameter-of
+  const [user] = useAuthState(getAuth());
 
-  const user = true;
+  const signInWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(getAuth(), provider);
+  };
 
-  return <div className="app">{user ? <Chat /> : <SignIn />}</div>;
+  const signOutofGoogle = () => {
+    signOut(getAuth());
+  };
+
+  return (
+    <div className="app">
+      {user ? (
+        <Chat signOutofGoogle={signOutofGoogle} user={user} />
+      ) : (
+        <SignIn signInWithGoogle={signInWithGoogle} />
+      )}
+    </div>
+  );
 }
 
 export default App;

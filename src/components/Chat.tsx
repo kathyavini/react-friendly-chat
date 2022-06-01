@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Chat.css';
+import '../styles/Chat.css';
 import send from '../send.svg';
 import icon from '../noun-chat.svg';
 
@@ -25,14 +25,24 @@ const ChatRow = ({ left, children }: ChatProps) => {
   );
 };
 
-export const Chat = () => {
+interface Chat {
+  signOutofGoogle: () => void;
+  user: any;
+}
+
+export const Chat = ({ signOutofGoogle, user }: Chat) => {
+  console.log(user);
   return (
     <div className="chatContainer">
       <div className="chatHeader">
         <img className="appIcon" src={icon} alt="app icon" />
         <div>
-          <h2>This is for login</h2>
-          <div className="loggedInAvatar"></div>
+          <h2>{user.displayName}</h2>
+          <img
+            src={user.photoURL}
+            className="loggedInAvatar"
+            onClick={signOutofGoogle}
+          ></img>
         </div>
       </div>
       <div className="chatBox">
