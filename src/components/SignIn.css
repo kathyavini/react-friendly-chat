@@ -1,0 +1,123 @@
+.signInContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: hidden;
+    background-image: url(../blob.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+@media (min-width: 1050px) {
+    .signInContainer {
+        background-position: left;
+        background-size: contain;
+        flex-direction: row;
+        padding-top: 20vh;
+    }
+
+
+}
+
+.titles {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.titles h1 {
+    z-index: 1;
+    position: relative;
+    font-size: var(--respXL);
+    color: white;
+    font-family: var(--secondaryFont);
+}
+
+@media (min-width: 1050px) {
+
+    .titles {
+        position: absolute;
+        right: 20vw;
+        top: 5vh;
+        align-items: flex-end;
+    }
+
+
+    .titles h1 {
+    color: var(--dark);
+}
+}
+
+.titles h2 {
+    color: var(--secondaryContrast);
+    font-size: var(--respL);
+}
+
+.signIn {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: .8rem;
+}
+
+.signInButton {
+    margin-top: -5vh;
+    background-color: var(--contrast);
+    color: var(--white);
+
+    border: none;
+    z-index: 1;
+    position: relative;
+    padding: 20px 40px;
+    border-radius: 60px;
+    font-size: var(--respM);
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    transition: all 200ms;
+}
+
+.signInButton:hover {
+    filter: brightness(1.3);
+}
+
+.signInButton:active {
+    transform: scale(0.98);
+}
+
+
+.blob2 {
+    width: clamp(300px, 60vw, 500px);
+    height: clamp(200px, 40vw, 350px);
+    background-color: var(--secondary);
+    padding: 50px 50px;
+    border-radius: 53% 47% 48% 52% / 37% 77% 23% 63%;
+    position: absolute;
+    bottom: 0;
+}
+
+.icon {
+    width: clamp(300px, 60vw, 500px);
+    height: clamp(300px, 60vw, 500px);
+    z-index: 1;
+    position: relative;
+    margin-top: -10vh;
+}
+
+.link {
+    line-height: 2rem;
+    font-size: 1.3rem;
+    z-index: 1;
+    position: relative;
+    font-size: var(--respS);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+

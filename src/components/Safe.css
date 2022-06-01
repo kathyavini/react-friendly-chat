@@ -1,0 +1,42 @@
+.safeContainer {
+    margin-top: -5vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.message {
+    width: min(90vw, 500px);
+    font-size: var(--respM);
+}
+.message span {
+    font-weight: bold;
+}
+
+.safeContainer button {
+    background-color: var(--secondary);
+    color: var(--dark);
+
+    border: none;
+    z-index: 1;
+    position: relative;
+    padding: 20px 40px;
+    border-radius: 60px;
+    font-size: var(--respM);
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    transition: all 200ms;
+}
+
+.safeContainer button:hover {
+    filter: brightness(1.3);
+}
+
+.safeContainer button:active {
+    transform: scale(0.98);
+}
