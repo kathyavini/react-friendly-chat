@@ -1,0 +1,41 @@
+.chatSubmit {
+    width: clamp(350px, 100%, 800px);
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+    gap: 20px;
+    background-color: var(--secondaryContrast);
+}
+
+.chatSubmit input {
+    width: 90%;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-family: var(--mainFont);
+    border: none;
+    border-radius: 100px;
+    padding: 1rem;
+    
+    /* outline: var(--dark) 1px solid; */
+}
+
+.sendButton {
+    background-color: transparent;
+    border: none;
+    transition: transform 200ms;
+}
+
+.sendButton:hover {
+    filter: hue-rotate(345deg);
+    transform: scale(1.2);
+}
+
+.sendButton:active {
+    filter: brightness(1.2);
+}

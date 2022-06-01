@@ -20,6 +20,8 @@ import {
   doc,
   serverTimestamp,
 } from 'firebase/firestore';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+
 import {
   getStorage,
   ref,
@@ -27,13 +29,7 @@ import {
   getDownloadURL,
 } from 'firebase/storage';
 
-// import firebase from 'firebase/compat/app';
-// import 'firebase/compat/firestore';
-// import 'firebase/compat/auth';
-// import { getAuth } from "firebase/auth"
-
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 import { getFirebaseConfig } from './firebase-config.js';
 import { SignIn } from './components/SignIn';

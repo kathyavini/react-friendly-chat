@@ -1,0 +1,50 @@
+.chatRow {
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    padding-block: 20px;
+    padding-inline: 10px;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.chatRow.left {
+    justify-content: flex-start;
+}
+
+.chatAvatar {
+    order: 2;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: -20px;
+    background-color: var(--dark);
+    color: white;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+.chatAvatar p {
+    font-size: 1.7rem;
+}
+
+.chatBubble {
+    min-height: 40px;
+    height: fit-content;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    padding-block: 20px;
+    padding-inline: 30px;
+    background-color: palevioletred;
+    border-radius: 100px 0 100px 100px;
+    color: white;
+}
+
+.chatBubble.left {
+    order: 2;
+    border-radius: 0 100px 100px 100px;
+    background-color: var(--secondary);
+    color: var(--dark);
+}
