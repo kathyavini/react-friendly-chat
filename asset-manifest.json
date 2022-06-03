@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/kathyavini/react-friendly-chat/static/css/main.39140b30.css",
-    "main.js": "/kathyavini/react-friendly-chat/static/js/main.ef3b776f.js",
-    "static/media/noun-chat.svg": "/kathyavini/react-friendly-chat/static/media/noun-chat.1d3440412634ecf9c5059446e43db818.svg",
-    "index.html": "/kathyavini/react-friendly-chat/index.html",
-    "static/media/blob.svg": "/kathyavini/react-friendly-chat/static/media/blob.864cd04473b477898cb9.svg",
-    "static/media/send.svg": "/kathyavini/react-friendly-chat/static/media/send.6a1fc0ffe96b70b6b4524234ad509252.svg",
-    "main.39140b30.css.map": "/kathyavini/react-friendly-chat/static/css/main.39140b30.css.map",
-    "main.ef3b776f.js.map": "/kathyavini/react-friendly-chat/static/js/main.ef3b776f.js.map"
+    "main.css": "/react-friendly-chat/static/css/main.885c292e.css",
+    "main.js": "/react-friendly-chat/static/js/main.cf7447ae.js",
+    "static/media/noun-chat.svg": "/react-friendly-chat/static/media/noun-chat.1d3440412634ecf9c5059446e43db818.svg",
+    "index.html": "/react-friendly-chat/index.html",
+    "static/media/blob.svg": "/react-friendly-chat/static/media/blob.864cd04473b477898cb9.svg",
+    "static/media/send.svg": "/react-friendly-chat/static/media/send.6a1fc0ffe96b70b6b4524234ad509252.svg",
+    "main.885c292e.css.map": "/react-friendly-chat/static/css/main.885c292e.css.map",
+    "main.cf7447ae.js.map": "/react-friendly-chat/static/js/main.cf7447ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.39140b30.css",
-    "static/js/main.ef3b776f.js"
+    "static/css/main.885c292e.css",
+    "static/js/main.cf7447ae.js"
   ]
 }
