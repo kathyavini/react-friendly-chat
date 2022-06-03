@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import '../styles/SignIn.css';
-import icon from '../noun-chat.svg';
+import icon from '../assets/noun-chat.svg';
 import { Link } from 'react-router-dom';
 
 interface SignIn {

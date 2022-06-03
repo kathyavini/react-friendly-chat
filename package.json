@@ -2,6 +2,7 @@
   "name": "firebase-chat",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/kathyavini/react-friendly-chat",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -11,6 +12,7 @@
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "firebase": "^9.8.2",
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-firebase-hooks": "^5.0.3",
@@ -22,6 +24,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

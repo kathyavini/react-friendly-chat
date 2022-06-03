@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import '../styles/Chat.css';
-import icon from '../noun-chat.svg';
+import icon from '../assets/noun-chat.svg';
 import { ChatRow } from './ChatMessage';
 
 import {
@@ -26,12 +26,10 @@ export const Chat = ({ signOutofGoogle, user }: Chat) => {
     limit(25)
   );
 
-  // TypeScript issue I don't understand means I can't get the document ID from this
   const [allMessages] = useCollectionData(messageQuery);
 
   useEffect(() => {
     scrollRef.current.scrollIntoView({ behavior: 'smooth' });
-    console.log(allMessages);
   }, [allMessages]);
 
   function renderMessages() {
@@ -79,7 +77,7 @@ export const Chat = ({ signOutofGoogle, user }: Chat) => {
         <div ref={scrollRef}></div>
       </div>
       <div className="spacer"></div>
-      <ChatSubmitForm user={user} scrollRef={scrollRef} />
+      <ChatSubmitForm user={user} />
     </div>
   );
 };

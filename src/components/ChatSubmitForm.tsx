@@ -7,14 +7,13 @@ import {
 } from 'firebase/firestore';
 import '../styles/ChatSubmitForm.css';
 
-import send from '../send.svg';
+import send from '../assets/send.svg';
 
 interface ChatSubmitProps {
   user: any;
-  scrollRef: any;
 }
 
-export function ChatSubmitForm({ user, scrollRef }: ChatSubmitProps) {
+export function ChatSubmitForm({ user }: ChatSubmitProps) {
   const [message, setMessage] = useState('');
 
   async function saveMessage(messageText: string) {
